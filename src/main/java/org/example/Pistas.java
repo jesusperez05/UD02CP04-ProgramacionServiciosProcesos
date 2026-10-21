@@ -1,8 +1,5 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.concurrent.Semaphore;
-
 public class Pistas {
     private boolean[] disponibles = {true, true};
 

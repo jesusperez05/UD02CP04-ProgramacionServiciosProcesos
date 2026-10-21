@@ -28,12 +28,12 @@ public class Vehiculo implements Runnable{
     @Override
     public void run() {
         int pista = -1;
-        int tiempo = new java.util.Random().nextInt(3);
+        int tiempo = new java.util.Random().nextInt(4) + 2;
 
         try {
             pista = pistas.entrar(this);
             System.out.println(nombre + " está realizando la prueba durante " + tiempo + " segundos.");
-            Thread.sleep(3000);
+            Thread.sleep(tiempo * 1000);
             System.out.println(nombre + " ha tardado " + tiempo + " segundos en realizar la prueba.");
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
