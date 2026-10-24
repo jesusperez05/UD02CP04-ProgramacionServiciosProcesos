@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Random;
+
 public class Vehiculo implements Runnable{
     private String nombre;
     private Pistas pistas;
@@ -27,8 +29,10 @@ public class Vehiculo implements Runnable{
 
     @Override
     public void run() {
+        Random random = new Random();
+
         int pista = -1;
-        int tiempo = new java.util.Random().nextInt(4) + 2;
+        int tiempo = random.nextInt(4) + 2;
 
         try {
             pista = pistas.entrar(this);
